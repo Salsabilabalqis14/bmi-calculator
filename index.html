@@ -5,10 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
+    <link rel="icon" href="bmi.png">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Javascript -->
     <script defer src="script.js"></script>
 </head>
 <body>
+    <main class="container">
+        <section id="main-content">
+            <div id="title">
+                <h1>Check Your BMI</h1>
+                <p>Enter your weight and height below to check your BMI results</p>
+            </div>
+            <form action="" id="form-input">
+                <div class="input-item">
+                    <p>Put your weight in here (KG)</p>
+                    <input type="number" name="weight" id="weight" min="1" placeholder="60" required>
+                    <span class="error" aria-live="polite"></span>
+                </div>
+                <div class="input-item">
+                    <p>Put your height in here (CM)</p>
+                    <input type="number" name="height" id="height" min="1" placeholder="160" required>
+                    <span class="error" aria-live="polite"></span>
+                </div>
+                <button id="btn-calculate" class="btn">Calculate BMI</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="result-container" class="result-container">
+        <section id="result">
+            <img src="bmi.png" alt="">
+            <div id="title">
+                <h1>Your BMI Result</h1>
+                <p>Your Score is <span id="score"></span> which means You are <span id="categories"></span></p>
+            </div>
+            <button type="button" class="btn" id="btn-close">OK</button>
+        </section>
+    </div>
     
 </body>
 </html>
